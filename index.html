@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Reproduzir Sons</title>
+</head>
+<body>
+
+<div class="bts"> 
+    <button class="a1" onclick="reproduzirSom('a1')"> A </button>
+    <button class="s2" onclick="reproduzirSom('s2')"> S </button>
+    <button class="d3" onclick="reproduzirSom('d3')"> D </button>
+    <button class="f4" onclick="reproduzirSom('f4')"> F </button>
+    <button class="g5" onclick="reproduzirSom('g5')"> G </button>
+    <button class="h6" onclick="reproduzirSom('h6')"> H </button>
+    <button class="j7" onclick="reproduzirSom('j7')"> J </button>
+    <button class="k8" onclick="reproduzirSom('k8')"> K </button>
+    <button class="l9" onclick="reproduzirSom('l9')"> L </button>
+    <button class="ç0" onclick="reproduzirSom('ç0')"> Ç </button>
+
+    <audio id="a1" src="arquivos/clap.mp3"></audio>
+    <audio id="s2" src="arquivos/do.mp3"></audio>
+    <audio id="d3" src="arquivos/eep.mp3"></audio>
+    <audio id="f4" src="arquivos/musical-drop.mp3"></audio>
+    <audio id="g5" src="arquivos/re.mp3"></audio>
+    <audio id="h6" src="arquivos/reverse.mp3"></audio>
+    <audio id="j7" src="arquivos/spooky.mp3"></audio>
+    <audio id="k8" src="arquivos/tonal_impact.mp3"></audio>
+    <audio id="l9" src="arquivos/ui.mp3"></audio>
+    <audio id="ç0" src="arquivos/violin.mp3"></audio>
+</div>
+
+<script>
+
+    function reproduzirSom(id) {
+        const audio = document.getElementById(id);
+        audio.currentTime = 0; // Reinicia o som
+        audio.play(); // Reproduz o som
+    }
+
+    document.addEventListener('keydown', function(event) {
+    const somMapeado = {
+        'A': 'a1',
+        'S': 's2',
+        'D': 'd3',
+        'F': 'f4',
+        'G': 'g5',
+        'H': 'h6',
+        'J': 'j7',
+        'K': 'k8',
+        'L': 'l9',
+        'Ç': 'ç0'
+    };
+
+    const somId = somMapeado[event.key];
+    if (somId) {reproduzirSom(somId);}
+});
+
+</script>
+</body>
+</html>
