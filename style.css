@@ -27,7 +27,7 @@ body{
     justify-content: center; 
     align-items: center; 
     margin: 10px 0; /* Espaço entre as divs */ padding: 10px; 
-    flex-wrap: wrap; /* Permitir que os botões se reorganicem */}
+    flex-wrap: wrap; /* Permitir que os botões se reorganizem */}
 
 
 .q1,.w2,.e3,.r4,.t5,.y6,.u7,.i8,.o9,.p0,.a1,.s2,.d3,.f4,.g5,.h6,.j7,.k8,.l9,.ç0,.z1,.x2,.c3,.v4,.b5,.n6,.m7,.bb,.nn,.mm{
